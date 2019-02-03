@@ -1,0 +1,4 @@
+.pokemons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
