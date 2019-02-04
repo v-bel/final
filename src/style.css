@@ -2,3 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.pokemon-avatar {
+  max-width: 200px;
+}

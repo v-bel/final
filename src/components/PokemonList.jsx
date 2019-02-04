@@ -1,31 +1,14 @@
 /* eslint-disable import/prefer-default-export */
-import React, { Component } from 'react';
+import React from 'react';
+import { Avatar } from './Avatar';
+import { PokemonName } from './PokemonName';
 import { CatchButton } from './CatchButton';
+import PokemonCardContainer from '../containers/PokemonCardContainer';
+import { PokemonCard } from './PokemonCard';
 
 export const PokemonList = props => {
   const pokemons = props.pokemonList.map(poke => (
-    <div key={poke.id}>
-      <p>{poke.name}</p>
-      <CatchButton />
-    </div>
+    <PokemonCardContainer poke={poke} />
   ));
-  return <div className="pokemons-wrapper">{pokemons}</div>;
+  return <div className="pokemons-wrapper d-flex flex-wrap">{pokemons}</div>;
 };
-
-// export class PokemonList extends Component {
-//   componentDidMount() {
-//     this.props.fetchPokemons();
-//   }
-
-//   render() {
-//     const pokemons = this.props.pokemonList.map(poke => (
-//       <div key={poke.id}>
-//         <Avatar />
-//         <p>{poke.name}</p>
-//         <CatchButton />
-//       </div>
-//     ));
-//     return <div className="pokemons-wrapper">{pokemons}</div>;
-//   }
-// }
-

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 import { reducer } from './reducers/reducer';
-import PokemonListContainer from './containers/PokemonListContainer';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
 import './style.css';
 
 export const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <PokemonListContainer />
+    <HashRouter>
+      <Fragment>
+        <Header />
+        <Main />
+      </Fragment>
+    </HashRouter>
   </Provider>,
   document.getElementById('root')
 );

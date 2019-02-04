@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPokemons, fetchCaught, catchPokemon } from '../actions/actions';
-import { PokemonList } from '../components/PokemonList';
+import { fetchCaught } from '../actions/actions';
+import { CaughtList } from '../components/CaughtList';
 
-class PokemonListContainer extends Component {
+class CaughtListContainer extends Component {
   componentDidMount() {
-    this.props.fetchPokemons();
     this.props.fetchCaught();
   }
 
   render() {
-    return <PokemonList pokemonList={this.props.pokemonList} />;
+    return (
+      <CaughtList
+        caughtPokemonList={this.props.caughtPokemonList}
+      />
+    );
   }
 }
 
@@ -20,11 +23,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPokemons: () => dispatch(fetchPokemons()),
   fetchCaught: () => dispatch(fetchCaught())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PokemonListContainer);
+)(CaughtListContainer);
