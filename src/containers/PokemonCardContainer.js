@@ -7,10 +7,17 @@ class PokemonCardContainer extends Component {
   handleClick(poke, e) {
     e.preventDefault();
     this.props.catchPokemon(poke);
+    e.target.setAttribute('disabled', true);
+    e.target.textContent = 'You caught me ;)';
   }
 
   render() {
-    return <PokemonCard poke={this.props.poke} onClick={this.handleClick.bind(this, this.props.poke)} />;
+    return (
+      <PokemonCard
+        poke={this.props.poke}
+        onClick={this.handleClick.bind(this, this.props.poke)}
+      />
+    );
   }
 }
 

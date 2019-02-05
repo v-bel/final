@@ -1,78 +1,22 @@
 {
-  "caught": [
-    {
-      "name": "charmander",
-      "id": 4,
-      "date": "2/4/2019, 11:40:20 AM"
-    },
-    {
-      "name": "bulbasaur",
-      "id": 1,
-      "date": "2/4/2019, 11:45:45 AM"
-    },
-    {
-      "name": "kakuna",
-      "id": 14,
-      "date": "2/4/2019, 11:50:04 AM"
-    },
-    {
-      "name": "butterfree",
-      "id": 12,
-      "date": "2/4/2019, 11:54:20 AM"
-    },
-    {
-      "name": "metapod",
-      "id": 11,
-      "date": "2/4/2019, 12:00:19 PM"
-    },
-    {
-      "name": "raticate",
-      "id": 20,
-      "date": "2/4/2019, 12:28:29 PM"
-    },
-    {
-      "name": "clefairy",
-      "id": 35,
-      "date": "2/4/2019, 12:31:01 PM"
-    },
-    {
-      "name": "paras",
-      "id": 46,
-      "date": "2/4/2019, 12:41:55 PM"
-    },
-    {
-      "name": "raichu",
-      "id": 26,
-      "date": "2/4/2019, 2:04:33 PM"
-    },
-    {
-      "name": "charizard",
-      "id": 6,
-      "date": "2/4/2019, 2:15:55 PM"
-    },
-    {
-      "name": "spinda",
-      "id": 327,
-      "date": "2/4/2019, 3:43:41 PM"
-    },
-    {
-      "name": "persian",
-      "id": 53,
-      "date": "2/4/2019, 3:53:28 PM"
-    }
-  ],
   "pokemons": [
     {
       "name": "bulbasaur",
-      "id": 1
+      "id": 1,
+      "isCaught": true,
+      "date": "2/5/2019, 12:08:33 AM"
     },
     {
       "name": "ivysaur",
-      "id": 2
+      "id": 2,
+      "isCaught": true,
+      "date": "2/5/2019, 12:10:21 AM"
     },
     {
       "name": "venusaur",
-      "id": 3
+      "id": 3,
+      "isCaught": true,
+      "date": "‎05‎.‎02‎.‎2019‎ ‎1‎:‎05‎:‎07"
     },
     {
       "name": "charmander",

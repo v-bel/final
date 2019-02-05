@@ -1,14 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
-import { Avatar } from './Avatar';
-import { PokemonName } from './PokemonName';
+import PokemonCardContainer from '../containers/PokemonCardContainer';
 
 export const CaughtList = props => {
   const caughtPokemons = props.caughtPokemonList.map(poke => (
-    <div key={poke.id} className="pokemon-card d-flex flex-column">
-      <Avatar id={poke.id} name={poke.name} />
-      <PokemonName name={poke.name} />
-    </div>
+    <PokemonCardContainer poke={poke} />
   ));
-  return <div className="pokemons-wrapper">{caughtPokemons}</div>;
+  return <div className="pokemons-wrapper d-flex flex-wrap justify-content-around">{caughtPokemons}</div>;
 };

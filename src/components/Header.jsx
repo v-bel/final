@@ -1,11 +1,25 @@
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <div>
-      <NavLink exact to='/' activeClassName='activeLink'>Pokemons</NavLink>
-      <NavLink to='/caught' activeClassName='activeLink'>Caught</NavLink>
-    </div>
+    <nav className="navbar bg-light nav-pills justify-content-start">
+      <NavLink
+        exact
+        to="/"
+        className="nav-link"
+        activeClassName="nav-link active"
+      >
+        Pokemons
+      </NavLink>
+      <NavLink
+        to="/caught"
+        className="nav-link"
+        activeClassName="nav-link active"
+      >
+        My Pokemons
+      </NavLink>
+    </nav>
   );
-}
+};

@@ -5,5 +5,5 @@ export const Avatar = props => {
     props.id
   }.png`;
   const altText = `${props.name}`;
-  return <img src={src} className="pokemon-avatar" alt={altText} onError={(e)=>{e.target.onerror = null; e.target.src="src/assets/pokeball.png"}} />;
+  return <img src={src} className="pokemon-avatar card-img-top" alt={altText} onError={(e)=>{e.target.onerror = null; e.target.src="src/assets/default.png"}} />;
 };

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  entry: ['whatwg-fetch', path.resolve(__dirname, 'src', 'index.jsx')],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
